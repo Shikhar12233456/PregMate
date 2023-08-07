@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:pr301/const/Myconsts/colours.dart';
 import 'package:pr301/const/Myconsts/size.dart';
-import 'package:pr301/firebase/upload/upload_profile.dart';
+import 'package:pr301/back/firebase/upload/upload_profile.dart';
 import 'package:pr301/screens/add_blog.dart';
 import 'package:pr301/screens/postScreen.dart';
 

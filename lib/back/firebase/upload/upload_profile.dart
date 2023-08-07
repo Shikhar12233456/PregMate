@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pr301/model/user.dart';
+import 'package:pr301/back/model/user.dart';
 
 class Profile {
   final _uid = FirebaseAuth.instance.currentUser?.uid;

@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:pr301/auth/login.dart';
-import 'package:pr301/firebase/firebase_options.dart';
+import 'package:pr301/back/firebase/firebase_options.dart';
 import 'package:pr301/screens/mainScreens/homescreen.dart';
 
 void main() async {
@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: _user != null ? const Home() : Login(),
-      // home: const Home(),
     );
   }
 }

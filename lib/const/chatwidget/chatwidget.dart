@@ -3,9 +3,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:pr301/const/Myconsts/colours.dart';
+import 'package:pr301/const/Myconsts/size.dart';
 
 class ChatWidget {
   Widget chatWidget(String chatId, String uid, double height) {
+    ConstBoxes cb = ConstBoxes();
     return SizedBox(
       height: height,
       child: StreamBuilder<QuerySnapshot>(
@@ -32,12 +34,12 @@ class ChatWidget {
                       return uid == data['userId']
                           ? messageWidget(
                               data['message'],
-                              stdatetime(data['time']),
+                              cb.stdatetime(data['time']),
                               Alignment.bottomRight,
                               Mycolours().ligthgreen)
                           : messageWidget(
                               data['message'],
-                              stdatetime(data['time']),
+                              cb.stdatetime(data['time']),
                               Alignment.bottomLeft,
                               Mycolours().lg);
                     });

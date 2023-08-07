@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pr301/const/Myconsts/colours.dart';
 
@@ -12,7 +10,6 @@ class UserInPost extends StatefulWidget {
 
 class _UserInPostState extends State<UserInPost> {
   final Mycolours mycolours = Mycolours();
-  final _userId = FirebaseAuth.instance.currentUser?.uid;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -22,21 +19,21 @@ class _UserInPostState extends State<UserInPost> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 30,
-              width: 30,
+              height: 60,
+              width: 60,
               decoration: BoxDecoration(
                   border: Border.all(width: 2, color: mycolours.lb),
-                  borderRadius: const BorderRadius.all(Radius.circular(15))),
+                  borderRadius: const BorderRadius.all(Radius.circular(30))),
               child: CircleAvatar(
                 backgroundImage: NetworkImage(widget.user['imageUrl']),
-                radius: 15,
+                radius: 30,
               ),
             ),
           ),
           Text(
             widget.user['name'],
             style: const TextStyle(
-                fontWeight: FontWeight.w700, color: Colors.black),
+                fontWeight: FontWeight.w700, color: Colors.black, fontSize: 20),
           ),
         ],
       ),

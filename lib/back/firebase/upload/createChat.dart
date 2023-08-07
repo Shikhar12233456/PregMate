@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:pr301/model/chat.dart';
-import 'package:pr301/model/chat_room.dart';
+import 'package:pr301/back/model/chat.dart';
+import 'package:pr301/back/model/chat_room.dart';
 
 class UploadChat {
   Future<void> message(Chat chat, String chatid) async {

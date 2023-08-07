@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pr301/firebase/upload/like.dart';
+import 'package:pr301/back/firebase/upload/like.dart';
 
 class LikeWidget {
   Widget likeandcout(String docId, String currentUserId) {

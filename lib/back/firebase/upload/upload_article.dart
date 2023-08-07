@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pr301/model/post.dart';
+import 'package:pr301/back/model/post.dart';
 
 class CrudMethods {
   Future<void> addData(Post post) async {

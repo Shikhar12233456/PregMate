@@ -1,15 +1,12 @@
-import 'dart:isolate';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pr301/const/chatwidget/chatwidget.dart';
 import 'package:pr301/const/widgetConsts/loading.dart';
-import 'package:pr301/firebase/upload/createChat.dart';
-import 'package:pr301/firebase/upload/setChat.dart';
-import 'package:pr301/firebase/upload/upload_profile.dart';
-import 'package:pr301/model/chat.dart';
-import 'package:pr301/model/chat_room.dart';
-import 'package:pr301/screens/chatScreens/chatPage.dart';
+import 'package:pr301/back/firebase/upload/createChat.dart';
+import 'package:pr301/back/firebase/upload/setChat.dart';
+import 'package:pr301/back/firebase/upload/upload_profile.dart';
+import 'package:pr301/back/model/chat.dart';
+import 'package:pr301/back/model/chat_room.dart';
 
 class IndChat extends StatefulWidget {
   IndChat({Key? key, required this.peerId}) : super(key: key);
@@ -133,8 +130,9 @@ class _IndChatState extends State<IndChat> {
               peerId: peer['id'],
               peerName: peer['name'],
               time: DateTime.now().toString(),
-              peerImageUrl: peer['imageUrl']),
-          user);
+              peerImageUrl: peer['imageUrl'],
+              recentChat: textEditingController.text),
+          user, textEditingController.text);
     } else {
       print("empty message");
     }

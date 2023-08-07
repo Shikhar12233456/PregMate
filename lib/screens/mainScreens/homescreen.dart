@@ -5,13 +5,13 @@ import 'package:get/get.dart';
 import 'package:pr301/auth/login.dart';
 import 'package:pr301/const/bottomNabBar.dart';
 import 'package:pr301/controllers/bottomnavbarController.dart';
-import 'package:pr301/model/post.dart';
+import 'package:pr301/back/model/post.dart';
 import 'package:pr301/screens/add_blog.dart';
 import 'package:pr301/screens/chatScreens/chatPage.dart';
 import 'package:pr301/screens/mainScreens/list.dart';
 import 'package:pr301/screens/mainScreens/user_profile.dart';
 
-import '../../firebase/firebase_auth.dart';
+import '../../back/firebase/firebase_auth.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

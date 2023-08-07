@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pr301/model/commentModel.dart';
+import 'package:pr301/back/model/commentModel.dart';
 
 class Comment {
   Future<void> addComment(CommentModel commentModel, String postid) async {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pr301/const/Myconsts/colours.dart';
 import 'package:pr301/const/widgetConsts/userInfoTile.dart';
-import 'package:pr301/firebase/firebase_auth.dart';
-import 'package:pr301/firebase/upload/upload_profile.dart';
+import 'package:pr301/back/firebase/firebase_auth.dart';
+import 'package:pr301/back/firebase/upload/upload_profile.dart';
 
 import '../../const/widgetConsts/loading.dart';
 

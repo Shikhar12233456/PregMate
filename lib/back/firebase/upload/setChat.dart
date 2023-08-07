@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
-import 'package:pr301/model/chat_room.dart';
+import 'package:pr301/back/model/chat_room.dart';
 
 class SetChat {
-  Future<void> setChat(ChatRoom chatRoom, Map<String, dynamic> user) async {
+  Future<void> setChat(ChatRoom chatRoom, Map<String, dynamic> user, String text) async {
     if (await checkpresent(chatRoom)) {
       FirebaseFirestore.instance
           .collection("user")
@@ -27,7 +27,9 @@ class SetChat {
                   peerId: user['id'],
                   peerName: user['name'],
                   time: DateTime.now().toString(),
-                  peerImageUrl: user['imageUrl'])
+                  peerImageUrl: user['imageUrl'],
+                  recentChat: text
+                  )
               .toMap())
           .catchError((e) {
         print(e);
